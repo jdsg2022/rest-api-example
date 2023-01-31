@@ -18,11 +18,8 @@ public class NoteController {
 
     List<Note> notes = new ArrayList<>();
 
-    @Autowired
-    private NoteService service;
 
-
-    @GetMapping()
+    @GetMapping("/bring/all")
     public ResponseEntity getAllNotes(){
         return new ResponseEntity(notes, HttpStatus.FOUND);
     }
